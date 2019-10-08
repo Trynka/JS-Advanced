@@ -1,5 +1,6 @@
 function solve (input){
-    return input.reduce((acc, curr, index) => { if (curr >= input[index-1]){acc.push(input[index-1])}; return acc}, []);
+    let result = input.reduce((acc, curr, index) => {if (curr >= Math.max(...acc)){acc.push(curr)}; return acc}, []);
+    return result.join('\n');
 }
 console.log(solve([1, 
     3, 
