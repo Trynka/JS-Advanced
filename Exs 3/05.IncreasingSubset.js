@@ -1,5 +1,5 @@
 function solve (input){
-    return input.reduce((acc, curr, index) => { if (curr >= acc){acc.push(curr)}; return acc}, []);
+    return input.reduce((acc, curr, index) => { if (curr >= input[index-1]){acc.push(input[index-1])}; return acc}, []);
 }
 console.log(solve([1, 
     3, 
@@ -10,4 +10,18 @@ console.log(solve([1,
     3, 
     2, 
     24]
+    ))
+
+console.log(solve([1, 
+    2, 
+    3,
+    4]
+    ))
+
+console.log(solve([20, 
+    3, 
+    2, 
+    15,
+    6, 
+    1]
     ))
