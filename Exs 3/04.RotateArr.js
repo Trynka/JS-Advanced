@@ -1,14 +1,9 @@
 function solve (input) {
-    let step = Number(input.pop());
-    let mod = 0;
-    if (input.length > step){
-        mod = step;
-    } else {
-        mod = (step - input.length) % input.length;
-    }
- 
-    for (let i = 0; i < mod; i ++) {
-        input.unshift(input.pop());
+    let step = Number(input.pop()) % input.length;
+     
+    for (let i = 0; i < step; i ++) {
+        let elem = input.pop();
+        input.unshift(elem);
     }
     return input.join(" ");
 }

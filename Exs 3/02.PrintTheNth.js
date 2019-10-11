@@ -1,10 +1,6 @@
 function solve(input){
     let step = Number(input.pop());
-    let arr = [];
-    for (let i = 0; i < input.length; i+= step){
-        arr.push(input[i]);
-    }
-    return arr.join("\n");
+    return input.filter((_, index) => { return index %  step === 0 }).join("\n");
 }
 console.log(solve([
     '5', 
